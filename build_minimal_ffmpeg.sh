@@ -39,7 +39,7 @@ sudo apt install -y \
 CROSS_PREFIX="x86_64-w64-mingw32-"
 HOST="x86_64-w64-mingw32"
 
-# MinGWを posix スレッドモデルに変更 (x265のC++11 std::thread要件回避)
+# MinGWを posix スレッドモデルに変更 (x265のC++11 std::thread要件対応)
 sudo update-alternatives --set x86_64-w64-mingw32-gcc /usr/bin/x86_64-w64-mingw32-gcc-posix || true
 sudo update-alternatives --set x86_64-w64-mingw32-g++ /usr/bin/x86_64-w64-mingw32-g++-posix || true
 
@@ -160,7 +160,7 @@ make distclean || make clean || true
     --disable-everything \
     --enable-ffmpeg \
     --enable-decoder=h264,aac,pcm_bluray,subrip,ass \
-    --enable-encoder=libx265,libfdk_aac,srt,ass,webvtt \
+    --enable-encoder=libx265,libfdk_aac \
     --enable-demuxer=mov,matroska,mpegts,srt,ass \
     --enable-muxer=mov,matroska \
     --enable-parser=h264,hevc,aac \
