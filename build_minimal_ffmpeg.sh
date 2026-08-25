@@ -159,9 +159,9 @@ make distclean || make clean || true
     --enable-libx265 \
     --disable-everything \
     --enable-ffmpeg \
-    --enable-decoder=h264,aac,pcm_bluray,subrip,ass \
-    --enable-encoder=libx265,libfdk_aac \
-    --enable-demuxer=mov,matroska,mpegts,srt,ass \
+    --enable-decoder=h264,aac,pcm_bluray,webvtt \
+    --enable-encoder=libx265,libfdk_aac,movtext \
+    --enable-demuxer=mov,matroska,mpegts,webvtt \
     --enable-muxer=mov,mp4,ipod,matroska \
     --enable-parser=h264,hevc,aac \
     --enable-protocol=file,cenc \
