@@ -110,7 +110,7 @@ ninja install
 
 # x265 の pkg-config ファイルに静的 C++ ライブラリ依存を自動追加
 if [ -f "$BUILD_DIR/lib/pkgconfig/x265.pc" ]; then
-    sed -i 's/Libs.private:.*/Libs.private: -lstdc++ -lwinpthread/g' "$BUILD_DIR/lib/pkgconfig/x265.pc"
+    sed -i.bak 's/Libs.private:.*/Libs.private: -lstdc++ -lwinpthread/g' "$BUILD_DIR/lib/pkgconfig/x265.pc"
 fi
 
 cd "$BUILD_DIR"
