@@ -162,9 +162,9 @@ make distclean || make clean || true
     --enable-decoder=h264,aac,pcm_bluray,subrip,ass \
     --enable-encoder=libx265,libfdk_aac \
     --enable-demuxer=mov,matroska,mpegts,srt,ass \
-    --enable-muxer=mov,matroska \
+    --enable-muxer=mov,mp4,ipod,matroska \
     --enable-parser=h264,hevc,aac \
-    --enable-protocol=file \
+    --enable-protocol=file,cenc \
     --enable-filter=aresample
 
 make -j$(nproc)
