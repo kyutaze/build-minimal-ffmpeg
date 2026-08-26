@@ -163,7 +163,7 @@ make distclean || make clean || true
     --enable-encoder=libx265,libfdk_aac,movtext \
     --enable-demuxer=mov,matroska,mpegts,webvtt \
     --enable-muxer=mov,mp4,ipod,matroska \
-    --enable-parser=h264,hevc,aac \
+    --enable-parser=h264,aac \
     --enable-protocol=file,cenc \
     --enable-filter=aresample
 
